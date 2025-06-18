@@ -1,0 +1,157 @@
+/* === ABOUT US TITLE === */
+.about-title-section {
+  text-align: center;
+  margin-top: 50apx;
+  margin-bottom: 60px;
+  padding-top: 40px;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #169976;
+  font-weight: bold;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* === WHO WE ARE SECTION === */
+.who-we-are-section {
+  background-color: #169976;
+  position: relative;
+  padding: 200px 5% 100px;
+  overflow: hidden;
+  color: white;
+}
+
+.who-we-are-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.who-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1 1 calc(50% - 20px); /* two per row */
+  min-width: 300px;
+  box-sizing: border-box;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.who-box h2,
+.who-box h3 {
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.who-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Decorative wave (optional) */
+.who-we-are-section::before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  z-index: 0;
+}
+
+/* === VISION / MISSION / STRATEGY SECTION === */
+.vms-section {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 80px 5%;
+}
+
+.vms-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.vms-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.vms-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.vms-card {
+  flex: 1 1 calc(33.333% - 30px); /* three per row */
+  min-width: 280px;
+  max-width: 100%;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.vms-card .emoji {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.vms-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.vms-card .sub {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.vms-card .main {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* AOS compatibility */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+/* Hide elements before AOS loads */
+[v-cloak] {
+  display: none;
+}
+
+/* === RESPONSIVE STACKING ON SMALLER SCREENS === */
+@media (max-width: 768px) {
+  .who-box {
+    flex: 1 1 100%;
+  }
+
+  .vms-card {
+    flex: 1 1 100%;
+  }
+}
