@@ -5,15 +5,14 @@ const Project = require("../models/Project");
 // POST /api/projects - Add a new project
 router.post("/", async (req, res) => {
   try {
-    const { swiper, iframe, title, category } = req.body;
-    const project = new Project({ swiper, iframe, title, category });
+    const { swiper, iframe, title, category, behanceUrl } = req.body; // ✅ include behanceUrl
+    const project = new Project({ swiper, iframe, title, category, behanceUrl }); // ✅ pass it here
     await project.save();
     res.status(201).json({ success: true, project });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
 });
-
 // GET /api/projects?swiper=booths
 router.get("/", async (req, res) => {
   try {
